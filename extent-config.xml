@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <!-- The report theme (standard or dark) -->
+    <configuration>
+        <theme>standard</theme>
+    </configuration>
+
+    <!-- Optional. Used to customize the HTML report template -->
+    <!-- 
+    <templatePath>path/to/your-custom-template.html</templatePath>
+    -->
+
+    <!-- Optional. Used to specify the report title -->
+    <!-- 
+    <reportName>My Test Report</reportName>
+    -->
+
+    <!-- Optional. Used to specify the report document title -->
+    <!-- 
+    <documentTitle>My Document Title</documentTitle>
+    -->
+
+    <!-- Optional. Used to specify the report encoding -->
+    <!-- 
+    <encoding>UTF-8</encoding>
+    -->
+
+    <!-- Optional. Used to specify the report protocol (http/https) -->
+    <!-- 
+    <protocol>http</protocol>
+    -->
+
+    <!-- Optional. Used to specify the report host (e.g., localhost) -->
+    <!-- 
+    <host>localhost</host>
+    -->
+
+    <!-- Optional. Used to specify the report port (e.g., 8080) -->
+    <!-- 
+    <port>8080</port>
+    -->
+
+    <!-- Optional. Used to specify the report path -->
+    <!-- 
+    <reportPath>/path/to/your/report</reportPath>
+    -->
+
+    <!-- Optional. Used to specify the screenshot capturing strategy (base64, img, or path) -->
+    <!-- 
+    <screenshotCapture>base64</screenshotCapture>
+    -->
+
+    <!-- Optional. Used to specify the chart visibility in the report -->
+    <!-- 
+    <chartVisibility>ON_OPEN</chartVisibility>
+    -->
+
+    <!-- Optional. Used to specify the status configuration for the charts -->
+    <!-- 
+    <statusConfig>
+        <successPass>pass with success</successPass>
+        <successFail>pass with failure</successFail>
+        <failurePass>failure with success</failurePass>
+        <failureFail>failure with failure</failureFail>
+    </statusConfig>
+    -->
+
+    <!-- Optional. Used to configure the system info in the report -->
+    <!-- 
+    <systemInfo>
+        <parameter>
+            <name>Environment</name>
+            <value>Test</value>
+        </parameter>
+        <parameter>
+            <name>Browser</name>
+            <value>Chrome</value>
+        </parameter>
+    </systemInfo>
+    -->
+
+</extentreports>
