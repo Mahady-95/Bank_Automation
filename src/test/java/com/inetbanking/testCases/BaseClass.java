@@ -1,8 +1,13 @@
 package com.inetbanking.testCases;
 import com.inetbanking.uilities.*;
 
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -34,7 +39,7 @@ public class BaseClass {
 	
 	@Parameters("browsers")
 	@BeforeClass
-	public void setUp(String br)
+	public void setUp(String br) throws InterruptedException
 	{
 //		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//drivers//chromedriver.exe");
 		
@@ -45,7 +50,22 @@ public class BaseClass {
 		if(br.equals("chrome"))
 		{
 			System.setProperty("webdriver.chrome.driver", readconfig.getChromePath());
-			driver = new ChromeDriver();
+			ChromeOptions opt = new ChromeOptions();
+			opt.addExtensions(new File("./extentions/adblock.crx"));
+			
+			driver = new ChromeDriver(opt);
+			Thread.sleep(5000);
+			
+			String originalTabHandle = driver.getWindowHandle();
+			Set<String> windowHandles = driver.getWindowHandles();
+			for (String handle : windowHandles) {
+	            if (!handle.equals(originalTabHandle)) {
+	                driver.switchTo().window(handle);
+	                break;
+	            }
+	        }
+
+			
 		}
 		else if(br.equals("ed"))
 		{
@@ -57,7 +77,9 @@ public class BaseClass {
 			System.setProperty("webdriver.gecko.driver", readconfig.getFirefoxPath());
 			driver = new FirefoxDriver();
 		}
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		
+		//driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		driver.manage().window().maximize();
 		driver.get(bURL);
 	}
 	

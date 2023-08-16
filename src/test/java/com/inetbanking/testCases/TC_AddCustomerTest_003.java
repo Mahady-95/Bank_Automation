@@ -1,7 +1,13 @@
 package com.inetbanking.testCases;
 
+import java.io.File;
 import java.io.IOException;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 //import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -17,6 +23,8 @@ public class TC_AddCustomerTest_003 extends BaseClass {
 	@Test
 	public void addNewCustomer() throws InterruptedException, IOException
 	{
+		
+		
 		LoginPage lp = new LoginPage(driver);
 		
 		lp.setUserName(UName);
@@ -32,6 +40,9 @@ public class TC_AddCustomerTest_003 extends BaseClass {
 		logger.info("Providing the customer details....");
 		
 		addcust.clickAddNewCustomer();
+		Thread.sleep(5000);
+		
+		
 		addcust.custName("Mahady");
 		addcust.custGenden("male");
 		addcust.custDob("10","31","1984");
