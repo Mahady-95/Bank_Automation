@@ -7,18 +7,11 @@
   <test thread-count="5" name="BangkinApp Test(failed)">
     <parameter name="browsers" value="chrome"/>
     <classes>
-      <class name="com.inetbanking.testCases.TC_AddCustomerTest_003">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="addNewCustomer"/>
-        </methods>
-      </class> <!-- com.inetbanking.testCases.TC_AddCustomerTest_003 -->
       <class name="com.inetbanking.testCases.TC_LoginDDT_002">
         <methods>
           <include name="setUp"/>
-          <include name="tearDown"/>
           <include name="LoginDDT" invocation-numbers="0 1 2 3 4"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- com.inetbanking.testCases.TC_LoginDDT_002 -->
     </classes>

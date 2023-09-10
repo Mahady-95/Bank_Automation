@@ -12,8 +12,21 @@
 	<parameter name="browsers" value="chrome"></parameter>
 	  <classes>
 	     <class name="com.inetbanking.testCases.TC_TestLogin_001" />
-	     <!-- <class name="com.inetbanking.testCases.TC_LoginDDT_002"/>
-	     <class name="com.inetbanking.testCases.TC_AddCustomerTest_003"/> -->
+	     <class name="com.inetbanking.testCases.TC_LoginDDT_002"/>
+	     <class name="com.inetbanking.testCases.TC_AddCustomerTest_003"/>
+	     <class name="com.inetbanking.testCases.Tc_EditCustomerTest_004"/>
+	     <class name="com.inetbanking.testCases.TC_DeleteCustomerTest_005"/>
+	     <class name="com.inetbanking.testCases.TC_NewAccountTest_006"/>
+	     <class name="com.inetbanking.testCases.TC_EditAccountTest_007"></class>
+	     <class name="com.inetbanking.testCases.TC_DeleteAccountTest_008"></class>
+	     <class name="com.inetbanking.testCases.TC_DepositTest_009"></class>
+	     <class name="com.inetbanking.testCases.TC_WithdrawTest_010"></class>
+	     <class name="com.inetbanking.testCases.TC_FundTransferTest_011"></class>
+	     <class name="com.inetbanking.testCases.TC_BalanceEnquiryTest_012"></class>
+	     <class name="com.inetbanking.testCases.TC_MiniStatementTest_013"></class>
+	     <class name="com.inetbanking.testCases.TC_CustomizedStatementTest_014"></class>
+	     <class name="com.inetbanking.testCases.TC_LogoutTest_015"></class>
+	     <class name="com.inetbanking.testCases.TC_ChangePasswordTest_016"></class>
 	     
 	     
 	  </classes>
